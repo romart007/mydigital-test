@@ -7,11 +7,15 @@
 body {
     background: $themeColor-Light;
     user-select: none;
+    font-family: 'Alegreya SC', serif !important;
+    ul li {
+        list-style: none;
+    }
 }
 
 main {
     h1 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Alegreya SC', !important;
         font-size: 200px;
     }
 }
