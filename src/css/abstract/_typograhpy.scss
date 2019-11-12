@@ -1,0 +1,50 @@
+html,
+body {
+    background-color: $blue;
+    color: $white;
+    font-size: 20px;
+    font-family: $theme-font !important;
+}
+
+body,
+input,
+select,
+textarea,
+button,
+a {
+    user-select: none;
+    font-family: $theme-font !important;
+    font-weight: 300;
+}
+
+p,
+address {
+    font-family: $secondary-font !important;
+    font-size: .75rem;
+    line-height: 1.25rem;
+}
+
+h1 {
+    font-size: 70px;
+    color: $white;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    position: relative;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 18px;
+}

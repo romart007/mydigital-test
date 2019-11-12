@@ -1,0 +1,30 @@
+.welcome-container {
+    padding-left: rem(70);
+    padding-right: rem(70);
+    padding-top: rem(155);
+    .header-info-container {
+        padding-top: rem(15);
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: rem(40);
+        img {
+            max-width: 168px;
+        }
+    }
+    h3 {
+        font-size: 46px;
+        line-height: 1.3;
+        letter-spacing: .05em;
+        font-weight: 900;
+    }
+    img {
+        max-height: rem(734);
+    }
+    p {
+        color: $blue-light;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: .05em;
+        line-height: 1.16;
+    }
+}

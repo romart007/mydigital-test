@@ -31,14 +31,14 @@
 
     <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">ADDRIKTIVE.GAME</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">ABOUT <span class="sr-only">(current)</span></a>
                     </li>
@@ -49,13 +49,16 @@
                         <a class="nav-link" href="#">HEX</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">BUILDINGS</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">UPDATES</a>
                     </li>
                 </ul>
-                <form class="form-inline">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button">LOG IN</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button">REGISTER</button>
-                </form>
+                <ul class="form-buttons">
+                    <li class="text-white text-uppercase">Log in</li>
+                    <li class="text-white text-uppercase">Register</li>
+                </ul>
             </div>
         </nav>
 
@@ -64,6 +67,37 @@
 
     <main role="main">
         <section class="hero">
+            <div class="hero-info text-center">
+                <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
+                </h1>
+                <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur</p>
+                <p class="text-uppercase">adipiscing elit, sed do eiusmod</p>
+                <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
+            </div>
+        </section>
+        <section class="welcome">
+            <div class="welcome-container row">
+                <div class="col-sm-6">
+                    <div class="welcome-info">
+                        <div class="header-info-container">
+                            <h3 class="text-uppercase"><span class="highlight">Welcome to</span><br> City States Medieval
+                            </h3>
+                            <img src="images/population.png" alt="" srcset="" class="img-fluid">
+                        </div>
+                        <p>CS:M Is a cross platform empire building mmo currently in development for mobile(tablet-smartphone) and desktop computers. <br><br> While similar to other games on first sight, CS:M is different in may ways. Visually we decided
+                            to go for the full 3d experience in low poly style. Every building and icon has handpainted with love to the details.<br><br> Resources in the game are also issued as real world assets on the stellar network. Players trade
+                            resources on a global exchange with each other instead of the engine or prices made up by the developers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/Building.png" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+            <div class="unique">
+                <!-- <div class="col-sm-6">.col-sm-4</div>
+                <div class="col-sm-6">.col-sm-8</div> -->
+            </div>
         </section>
     </main>
 

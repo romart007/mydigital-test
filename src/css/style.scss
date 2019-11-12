@@ -1,25 +1,31 @@
 /*--------------------------------------------------------------
+# Vendor Optionally add Bootstrap to your project
+--------------------------------------------------------------*/
+
+@import "~bootstrap/scss/bootstrap";
+
+/*--------------------------------------------------------------
+# Utilities and mixins
+--------------------------------------------------------------*/
+
+@import "base/utilities";
+@import 'mixins/mixins_general';
+
+/*--------------------------------------------------------------
 # Variables (Colors, Fonts, sizes)
 --------------------------------------------------------------*/
 
-@import "fonts";
-@import "variables";
+@import "abstract/fonts";
+@import "abstract/variables";
+@import "abstract/typograhpy";
 
 /*--------------------------------------------------------------
 # Normalize & Print
 --------------------------------------------------------------*/
 
-@import "normalize";
-@import "print";
-
-/**Optionally add Bootstrap to your project**/
-
-@import "~bootstrap/scss/bootstrap";
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-
+// @import "base/normalize";
+@import "base/print";
+@import "base/media";
 
 /*--------------------------------------------------------------
 # Sections
@@ -27,11 +33,12 @@
 
 @import "section/header";
 @import "section/hero";
-// @import "forms";
-@import "app";
+@import "section/welcome";
 
 /*--------------------------------------------------------------
-# Responsive Bug Fixes
+# Components
 --------------------------------------------------------------*/
 
-@import "media";
+@import "components/nav";
+@import "components/forms";
+@import "components/buttons";

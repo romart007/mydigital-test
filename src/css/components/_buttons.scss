@@ -1,0 +1,11 @@
+.btn {
+    &.custom1-outline {
+        margin-top: 55px;
+        color: $white;
+        border: 2px solid $white;
+        &:hover {
+            color: rgba($white, .7);
+            border: 2px solid rgba($white, .7);
+        }
+    }
+}
