@@ -1,0 +1,53 @@
+.slider {
+    height: 800px;
+    padding: 100px 0;
+    h3 {
+        font-size: 45px;
+        line-height: 1.2;
+        letter-spacing: .05em;
+        font-weight: 900;
+    }
+    .slick-list {
+        height: 600px;
+    }
+    // .slick-track {
+    //     height: 100%;
+    // }
+    .multiple-items {
+        max-width: 950px !important;
+        margin: 0 auto;
+        .slick-next {
+            right: 0;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        /* the slides */
+        .slick-slider {
+            overflow: hidden;
+        }
+        /* the parent */
+        .slick-list {
+            margin: 0 -20px;
+        }
+        /* item */
+        .card {
+            background: #0b0a26;
+            border: 1px solid #5d5e9a;
+            padding: 0 20px;
+            margin: .5%;
+            img {
+                height: 300px;
+                width: auto;
+                bottom: -196px;
+                right: 24px;
+            }
+        }
+        .slick-dots li button {
+            &::before {
+                opacity: 1;
+                color: #1B1C44;
+            }
+        }
+    }
+}

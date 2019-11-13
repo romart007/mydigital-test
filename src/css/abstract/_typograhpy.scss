@@ -2,8 +2,17 @@ html,
 body {
     background-color: $blue;
     color: $white;
-    font-size: 20px;
+    font-size: 100%;
     font-family: $theme-font !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.section-common {
+    padding-left: rem(70);
+    padding-right: rem(70);
 }
 
 body,
@@ -14,7 +23,7 @@ button,
 a {
     user-select: none;
     font-family: $theme-font !important;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 p,

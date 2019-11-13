@@ -1,47 +1,48 @@
-        .hero {
-            background-image: url("/images/hero.png");
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            height: 97vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            h1 {
-                letter-spacing: .05em;
-                font-weight: 900;
-                line-height: 1.4;
-                text-shadow: 0px 3px black;
-                margin-bottom: 14px;
-            }
-            p {
-                font-size: 24px;
-                letter-spacing: .05em;
-                line-height: 1.6;
-                font-weight: 400;
-            }
-            &:after {
-                background: rgba(#010917, .56);
-                display: block;
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                z-index: 1;
-            }
-            &:before {
-                bottom: 0;
-                display: block;
-                content: '';
-                position: absolute;
-                height: 50%;
-                width: 100%;
-                z-index: 2;
-                background-color: transparent;
-                background-image: linear-gradient(0deg, #010917, transparent);
-            }
-            .hero-info {
-                position: relative;
-                z-index: 3;
-            }
-        }
+.hero {
+    background-image: url("/images/hero.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        letter-spacing: .05em;
+        font-weight: 900;
+        line-height: 1.4;
+        text-shadow: 0px 3px black;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 24px;
+        letter-spacing: .05em;
+        line-height: 1.6;
+        font-weight: 400;
+        color: $white;
+    }
+    &:after {
+        background: rgba(#010917, .56);
+        display: block;
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    &:before {
+        bottom: 0;
+        display: block;
+        content: '';
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        z-index: 2;
+        background-color: transparent;
+        background-image: linear-gradient(0deg, #010917, transparent);
+    }
+    .hero-info {
+        position: relative;
+        z-index: 3;
+    }
+}
