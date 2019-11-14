@@ -12,7 +12,11 @@
         right: 0;
         z-index: 1;
         background-color: #0e0f23;
-        background-image: linear-gradient(to bottom, #0e0f23, #0e0f23);
+        // background-image: linear-gradient(to bottom, #0e0f23, #232234);
+        background-image: url('/images/hex-bg.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
     &-container {
         z-index: 2;

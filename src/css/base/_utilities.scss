@@ -355,13 +355,13 @@ button {
 .clickable:focus {
     cursor: pointer;
     outline: none;
-    -webkit-user-select: none;
+    -webkit-user-select: auto;
     /* Chrome all / Safari all */
-    -moz-user-select: none;
+    -moz-user-select: auto;
     /* Firefox all */
-    -ms-user-select: none;
+    -ms-user-select: auto;
     /* IE 10+ */
-    user-select: none;
+    user-select: auto;
     /* Likely future */
 }
 

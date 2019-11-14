@@ -1,8 +1,12 @@
 .btn {
     &.custom1-outline {
-        margin-top: 55px;
         color: $white;
         border: 2px solid $white;
+        font-size: 25px;
+        font-weight: 900;
+        padding: 18px 57px;
+        margin-top: 30px;
+        border-radius: 8px;
         &:hover {
             color: rgba($white, .7);
             border: 2px solid rgba($white, .7);

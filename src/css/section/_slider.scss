@@ -1,26 +1,45 @@
 .slider {
-    height: 800px;
-    padding: 100px 0;
+    // height: 800px;
+    padding-top: 100px;
+    padding-bottom: 140px;
+    background-image: url('/images/smoke-bg.png');
+    background-size: contain;
+    background-position: center center;
+    position: relative;
     h3 {
         font-size: 45px;
         line-height: 1.2;
         letter-spacing: .05em;
         font-weight: 900;
+        margin-bottom: 72px;
     }
     .slick-list {
-        height: 600px;
+        // height: 800px;
+        overflow: inherit;
     }
-    // .slick-track {
-    //     height: 100%;
-    // }
     .multiple-items {
-        max-width: 950px !important;
         margin: 0 auto;
+        .slick-arrow {
+            cursor: pointer;
+            z-index: 2;
+        }
         .slick-next {
-            right: 0;
+            right: calc(50% - 170px);
+            top: unset;
+            bottom: -74px;
+            &:before {
+                font-family: $secondary-font;
+                content: 'NEXT';
+            }
         }
         .slick-prev {
-            left: 0;
+            left: calc(50% - 200px);
+            bottom: -76px;
+            top: unset;
+            &:before {
+                font-family: $secondary-font;
+                content: 'PREV';
+            }
         }
         /* the slides */
         .slick-slider {
@@ -32,21 +51,46 @@
         }
         /* item */
         .card {
-            background: #0b0a26;
+            background-image: linear-gradient(to top, #080824, #161A40);
             border: 1px solid #5d5e9a;
             padding: 0 20px;
             margin: .5%;
+            background-color: #161A40;
+            .card-title {
+                margin-bottom: .75rem;
+                font-size: 35px;
+                font-weight: 900;
+                line-height: 1.4;
+                letter-spacing: .05em;
+            }
+            .card-text {
+                letter-spacing: .05em;
+            }
             img {
                 height: 300px;
                 width: auto;
-                bottom: -196px;
-                right: 24px;
+                top: 80px;
+                right: 0;
             }
         }
-        .slick-dots li button {
-            &::before {
-                opacity: 1;
-                color: #1B1C44;
+        .slick-dots {
+            bottom: -65px;
+            li {
+                transform: rotate(45deg);
+                margin: 0px 16px;
+                button {
+                    &::before {
+                        opacity: 1;
+                        content: '';
+                        background: #1B1C44;
+                        border-radius: 4px;
+                    }
+                }
+                &.slick-active {
+                    button::before {
+                        background: #F8B003;
+                    }
+                }
             }
         }
     }

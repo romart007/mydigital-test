@@ -1,0 +1,58 @@
+.latest-updates {
+    padding-bottom: 65px;
+    padding-top: 161px;
+    &-header {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 45px;
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: .05em;
+        margin-bottom: 107px;
+    }
+    .twitter-updates,
+    .medium-updates {
+        h3 {
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1.8;
+            letter-spacing: .05em;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: .05em;
+            line-height: 1.75;
+            span {
+                color: $blue-lighter;
+            }
+        }
+        .btn.custom1-outline {
+            font-size: 20px;
+            padding: 18px 27px;
+        }
+    }
+    .twitter-updates-container,
+    .medium-updates-container {
+        margin-top: 55px;
+        img {
+            margin-bottom: 20px;
+        }
+    }
+    .medium-updates-container p span,
+    .update-sm-i span {
+        margin-left: 15px;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: .05em;
+        color: #73718A;
+        font-family: poppins;
+        font-weight: 400;
+        position: relative;
+        top: 4px;
+    }
+    .medium-updates-container p span {
+        margin-left: 0;
+    }
+}

@@ -21,7 +21,7 @@ select,
 textarea,
 button,
 a {
-    user-select: none;
+    user-select: auto;
     font-family: $theme-font !important;
     font-weight: 400;
 }
