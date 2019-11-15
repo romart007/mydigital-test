@@ -20,6 +20,10 @@ footer {
         }
     }
     .mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
         text-align: right;
         img:first-child {
             margin-bottom: 22px;
@@ -33,6 +37,7 @@ footer {
         display: flex;
         align-items: center;
         a {
+            font-family: $secondary-font !important;
             font-size: 20px;
             letter-spacing: .05em;
             color: $white;

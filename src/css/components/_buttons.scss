@@ -12,4 +12,22 @@
             border: 2px solid rgba($white, .7);
         }
     }
+    &.custom1-solid {
+        font-size: 20px;
+        letter-spacing: .05em;
+        font-family: 'Alegreya SC' !important;
+        font-weight: 900;
+        color: #181827;
+        padding: 17px 17.5px 16px;
+        background: #F8B003;
+        border-radius: 5px;
+        border: 0 none;
+        outline: 0 none;
+        width: 100%;
+        margin-top: 50px;
+        &:hover {
+            color: rgba(#181827, .7);
+            background: rgba(#F8B003, .7);
+        }
+    }
 }

@@ -36,7 +36,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="">
-                <p>Addirktive</p>
+                <p>addirktive</p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,7 +71,7 @@
     <!-- header end -->
 
     <main role="main">
-        <section class="hero section-common">
+        <section class="hero section-common" hidden>
             <div class="hero-info text-center pos-relative">
                 <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
                 <!-- <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
@@ -81,6 +81,52 @@
                 <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
             </div>
         </section>
+
+        <section class="hero hero-register section-common">
+            <div class="col-sm-7">
+                <div class="hero-info text-center pos-relative">
+                    <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
+                    <!-- <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
+                    </h1>
+                    <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur</p>
+                    <p class="text-uppercase">adipiscing elit, sed do eiusmod</p> -->
+                    <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form action="" class="form-register">
+                    <h3>REGISTRATION</h3>
+                    <div class="form-group pos-relative">
+                        <label for="">Username*</label>
+                        <img src="images/info.png" alt="">
+                        <p>Your password must be lowercase and has alphanumeric<br> Chose wisely, your username will be used across the platform.
+                        </p>
+                        <span class="arrow"></span>
+                        <input class="form-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email Address*</label>
+                        <input class="form-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password*</label>
+                        <input class="form-input" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Confirm Password*</label>
+                        <input class="form-input" type="password">
+                    </div>
+                    <label class="container terms-agree" for="terms-agree">I agree the<span class="terms"> terms and conditions</span> 
+                        <input type="checkbox" name="" id="terms-agree">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="submit" class="btn custom1-solid" value="REGISTER">
+                    <p class="login-link">Do you have already an account?
+                        <a href="#">Log in</a></p>
+                </form>
+            </div>
+        </section>
+
         <section class="welcome section-common">
             <div class="welcome-container welcome-common row">
                 <img class="welcome-img-bg" src="images/bg-welcome.png" alt="building blury">
@@ -294,7 +340,7 @@
         <div class="row">
             <div class="col-sm-6 footer-logo">
                 <a href="">
-                    ADDRIKTIVE.GAME
+                    addirktive
                 </a>
             </div>
             <div class="col-sm-6 copy-rights">
