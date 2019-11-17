@@ -1,6 +1,15 @@
 .game-currency {
     position: relative;
     margin-top: 65px;
+    .header-info-container {
+        padding-top: rem(15);
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: rem(40);
+        img {
+            max-width: 168px;
+        }
+    }
     &:before {
         bottom: 0;
         display: block;
@@ -35,6 +44,7 @@
             max-height: 186px;
         }
         p {
+            color: #8c8dc2;
             font-size: 20px;
             letter-spacing: .05em;
             font-weight: 400;

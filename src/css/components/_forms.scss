@@ -1,4 +1,4 @@
-.form-register {
+.form {
     max-width: 568px;
     margin: 0 auto;
     width: 100%;
@@ -93,6 +93,7 @@
             }
         }
     }
+    .remember-me span,
     .terms-agree span {
         color: $white;
         top: 0;

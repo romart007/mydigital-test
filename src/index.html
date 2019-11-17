@@ -71,8 +71,8 @@
     <!-- header end -->
 
     <main role="main">
-        <section class="hero section-common">
-            <div class="hero-info text-center pos-relative">
+        <section class="hero section-common hidden">
+            <div class="hero-info text-center pos-relative hidden">
                 <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
                 <!-- <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
                 </h1>
@@ -81,8 +81,7 @@
                 <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
             </div>
         </section>
-
-        <section class="hero hero-register section-common">
+        <section class="hero hero-register section-common hidden">
             <div class="col-sm-7">
                 <div class="hero-info text-center pos-relative">
                     <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
@@ -94,7 +93,7 @@
                 </div>
             </div>
             <div class="col-sm-5">
-                <form action="" class="form-register">
+                <form action="" class="form">
                     <h3>REGISTRATION</h3>
                     <div class="form-group pos-relative">
                         <label for="">Username*</label>
@@ -116,13 +115,47 @@
                         <label for="">Confirm Password*</label>
                         <input class="form-input" type="password">
                     </div>
-                    <label class="container terms-agree" for="terms-agree">I agree the<span class="terms"> terms and conditions</span> 
+                    <label class="container terms-agree" for="terms-agree">I agree the<span class="terms"> terms and
+                            conditions</span>
                         <input type="checkbox" name="" id="terms-agree">
                         <span class="checkmark"></span>
                     </label>
                     <input type="submit" class="btn custom1-solid" value="REGISTER">
                     <p class="login-link">Do you have already an account?
                         <a href="#">Log in</a></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="hero hero-login section-common">
+            <div class="col-sm-7">
+                <div class="hero-info text-center pos-relative">
+                    <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
+                    <!-- <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
+                        </h1>
+                        <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur</p>
+                        <p class="text-uppercase">adipiscing elit, sed do eiusmod</p> -->
+                    <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form action="" class="form">
+                    <h3>Log in</h3>
+                    <div class="form-group pos-relative">
+                        <label for="">Username*</label>
+                        <input class="form-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input class="form-input" type="password">
+                    </div>
+                    <label class="container remember-me" for="remember-me">Remember me
+                        <input type="checkbox" name="" id="remember-me">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="submit" class="btn custom1-solid" value="LOG IN">
+                    <p class="login-link">Don't have an account yet?
+                        <a href="#">Register Now</a></p>
                 </form>
             </div>
         </section>
@@ -143,14 +176,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 building">
                     <img src="images/Building.png" alt="" srcset="" class="img-fluid">
                 </div>
             </div>
+            <div class="dots"><img class="dots-1" src="images/dot1.svg"></div>
             <div class="unique welcome-common row">
                 <img class="unique-img-bg" src="images/unique-building.png" alt="building blury">
 
-                <div class="col-sm-6">
+                <div class="col-sm-6 building2">
                     <img src="images/Building2.png" alt="" srcset="" class="img-fluid">
                 </div>
                 <div class="col-sm-6">
@@ -167,8 +201,10 @@
                     </div>
                 </div>
             </div>
+            <div class="dots dots-2"><img src="images/dot2.svg"></div>
         </section>
         <section class="game-currency section-common">
+            <div class="dots dots-3"><img src="images/dot3.svg"></div>
             <div class="game-currency-container row">
                 <div class="col-sm-6">
                     <div class="game-currency-info">
@@ -186,10 +222,12 @@
                     <img src="images/hex-shield.png" alt="" srcset="" class="img-fluid">
                 </div>
             </div>
+            <div class="dots dots-4"><img src="images/dot4.svg"></div>
         </section>
 
         <!-- temp slider -->
         <section class="slider">
+            <div class="dots dots-5"><img src="images/dot5.svg"></div>
             <h3 class="text-center"><span class="highlight">Building in</span><br> CITY STATES: MEDIEVAL
             </h3>
             <div class="multiple-items">
@@ -242,6 +280,7 @@
             </div>
         </section>
         <section class="latest-updates section-common">
+            <div class="dots dots-6"><img src="images/dot6.svg"></div>
             <div class="latest-updates-container row">
                 <h1 class="latest-updates-header"><span class="highlight">Check our</span><br> Latest Updates
                 </h1>
