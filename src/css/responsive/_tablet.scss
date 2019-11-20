@@ -1,0 +1,151 @@
+/* large screens*/
+
+@media only screen and (max-width: 1220px) {
+    header {
+        .form-buttons {
+            li {
+                &:first-child {
+                    padding-right: rem(20);
+                }
+                &:last-child {
+                    padding-left: rem(20);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    header {
+        .form-buttons {
+            li {
+                &:first-child {
+                    padding-right: rem(20);
+                }
+                &:last-child {
+                    padding-left: rem(20);
+                }
+            }
+        }
+    }
+    nav.bg-dark {
+        .navbar-nav {
+            .nav-link {
+                padding: 0 1.15rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    nav.bg-dark {
+        .navbar-collapse {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            left: 0;
+            right: 0;
+            align-items: center;
+            justify-content: center;
+            background: rgba(24, 24, 39, .9);
+            display: flex;
+            visibility: hidden;
+            top: 0;
+            &.show {
+                visibility: visible;
+                height: 100vh;
+            }
+        }
+        .navbar-nav {
+            height: 100%;
+            padding-top: 50px;
+            .nav-item {
+                padding-top: 30px;
+            }
+        }
+        .nav-container {
+            flex: 70%;
+            width: 70%;
+            flex-direction: row-reverse;
+        }
+        .form-buttons {
+            width: calc(100% - 60px);
+            justify-content: flex-end;
+            margin-right: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .dots {
+        display: none;
+    }
+    .hero {
+        .hero-banner-img {
+            max-width: 600px;
+            height: auto;
+        }
+    }
+    nav.bg-dark {
+        padding-left: 20px;
+        padding-right: 20px;
+        .navbar-brand {
+            p {
+                display: none;
+            }
+        }
+    }
+    header .form-buttons li {
+        font-size: 14px;
+    }
+    .btn.custom1-outline {
+        font-size: 14px;
+    }
+    .slider,
+    .game-currency-container,
+    .welcome-common,
+    .latest-updates {
+        padding-top: 55px !important;
+        &.unique {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .game-currency-info h3,
+        h3 {
+            font-size: 20px;
+        }
+        .header-info-container {
+            justify-content: space-between;
+            img {
+                max-width: 72px;
+            }
+        }
+        .game-currency-info p,
+        p {
+            font-size: 14px;
+        }
+        .building,
+        .building2,
+        .hex-shield-img {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+        }
+        img:not(.img-bg) {
+            max-height: 307px;
+        }
+    }
+    .slider {
+        h3 {
+            margin-bottom: 0;
+        }
+        .multiple-items .card {
+            .card-title {
+                font-size: 18px;
+            }
+            .card-text {
+                font-size: 14px;
+            }
+        }
+    }
+}

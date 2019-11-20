@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 @import "~bootstrap/scss/bootstrap";
+@import "vendor/twitter-feed";
 
 /*--------------------------------------------------------------
 # Utilities and mixins
@@ -47,3 +48,10 @@
 @import "components/forms";
 @import "components/buttons";
 @import "components/dots";
+
+/*--------------------------------------------------------------
+# responsive
+--------------------------------------------------------------*/
+
+@import "responsive/tablet";
+@import "responsive/phone";

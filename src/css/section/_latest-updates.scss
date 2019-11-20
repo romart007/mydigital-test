@@ -36,6 +36,13 @@
         .btn.custom1-outline {
             font-size: 20px;
             padding: 18px 27px;
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    color: hsla(0, 0%, 100%, .7);
+                }
+            }
         }
     }
     .twitter-updates-container,
