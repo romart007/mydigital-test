@@ -1,6 +1,7 @@
 footer {
     padding-top: 65px;
     padding-bottom: 55px;
+    background: #1D1D2D;
     .row:first-child {
         margin-bottom: 58px;
     }
@@ -36,6 +37,9 @@ footer {
     .footer-logo {
         display: flex;
         align-items: center;
+        img {
+            display: none;
+        }
         a {
             font-family: $secondary-font !important;
             font-size: 20px;

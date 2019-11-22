@@ -67,4 +67,48 @@
     .medium-updates-container p span {
         margin-left: 0;
     }
+    #medium-widget {
+        .medium-widget-article__row {
+            margin-top: 38px;
+            &:last-child {
+                margin-top: 52px;
+            }
+        }
+        .medium-widget-article__content a {
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            font-family: 'Poppins' !important;
+            letter-spacing: .05em;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .medium-widget-article__description {
+            @include multiLineEllipsis($lineHeight: 1.8em, $lineCount: 2, $bgColor: $blue);
+            font-size: 16px;
+            color: #73718A;
+            font-family: poppins;
+            font-weight: 400;
+            position: relative;
+            top: 4px;
+        }
+        .medium-widget-article__author {
+            margin-top: 30px;
+            &-name {
+                font-size: 16px;
+                line-height: 1.8;
+                letter-spacing: 0.05em;
+                color: rgb(115, 113, 138);
+                font-family: Poppins;
+                font-weight: 400;
+            }
+        }
+        .medium-widget-article {
+            &__like,
+            &__clap,
+            &__date {
+                display: none;
+            }
+        }
+    }
 }

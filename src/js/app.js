@@ -22,6 +22,18 @@ $('.multiple-items').slick({
     }]
 });
 
+MediumWidget.Init({
+    renderTo: '#medium-widget',
+    params: {
+        "resource": "https://medium.com/@addirktive",
+        "postsPerLine": 1,
+        "limit": 2,
+        "picture": "big",
+        "fields": ["description", "author", "claps", "likes", "publishAt"],
+        "ratio": "landscape"
+    }
+})
+
 
 //dynacmic dots 
 const imgBuilding = document.querySelector('.building').offsetWidth / 2;
@@ -95,13 +107,13 @@ var customizeTweetMedia = function() {
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('margin-left', '0');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.NaturalImage-image').css({
-        "max-height": "297px;",
+        "max-height": "330px;",
         "display": "flex;",
         "flex-direction": "column-reverse",
         "width": "auto",
     });
 
-    $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-media').css('max-height', '297px');
+    $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-media').css('max-height', '330px');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Body').css('border', '0 none');
 
@@ -109,6 +121,4 @@ var customizeTweetMedia = function() {
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function() {
         customizeTweetMedia(this);
     });
-
-
 }
