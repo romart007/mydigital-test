@@ -13,13 +13,13 @@ $('.multiple-items').slick({
     responsive: [{
         breakpoint: 767,
         settings: {
+            autoplay: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            infinite: true,
             dots: false,
             arrows: false
-        }
-    }]
+        },
+    }],
 });
 
 MediumWidget.Init({

@@ -1,5 +1,72 @@
 /* large screens*/
 
+@media only screen and (min-width: 1370px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+    .welcome-common {
+        h3 {
+            font-size: 35px;
+        }
+        .header-info-container {
+            justify-content: space-between;
+            img {
+                max-width: 130px;
+                margin: 0 auto;
+            }
+        }
+        p {
+            font-size: 16px;
+        }
+        img:not(.img-bg) {
+            max-height: 530px;
+        }
+        .unique img:not(.img-bg) {
+            max-height: 530px;
+        }
+    }
+    .game-currency {
+        .game-currency-info {
+            h3 {
+                font-size: 35px;
+            }
+            .header-info-container {
+                justify-content: space-between;
+                img {
+                    max-width: 130px;
+                    margin: 0 auto;
+                }
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        img:not(.img-bg) {
+            max-height: 530px;
+        }
+    }
+    .slider {
+        h3 {
+            font-size: 35px;
+        }
+        .multiple-items .card .card-title {
+            font-size: 30px;
+        }
+    }
+    .latest-updates-header {
+        h1 {
+            font-size: 35px;
+        }
+        .medium-updates h3,
+        .twitter-updates h3 {
+            font-size: 25px;
+        }
+    }
+}
+
 @media only screen and (max-width: 1220px) {
     header {
         .form-buttons {
@@ -155,16 +222,39 @@
     .game-currency-container {
         padding-bottom: 5px;
     }
+    .unique {
+        .unique-img-bg {
+            right: 0;
+        }
+    }
     .slider {
         h3 {
             margin-bottom: 0;
         }
-        .multiple-items .card {
-            .card-title {
-                font-size: 18px;
+        .multiple-items {
+            .slick-list {
+                margin: 0;
+                padding: 0 !important;
+                overflow: hidden;
             }
-            .card-text {
-                font-size: 14px;
+            .card {
+                padding: 0 10px;
+                // margin: .1%;
+                .card-title {
+                    font-size: 18px;
+                }
+                .card-text {
+                    font-size: 14px;
+                }
+                img {
+                    top: 110px;
+                    right: -20px;
+                    height: 197px;
+                }
+            }
+            .slick-dots,
+            .slick-arrow {
+                display: none !important;
             }
         }
     }
