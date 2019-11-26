@@ -19,6 +19,7 @@
     }
     .multiple-items {
         margin: 0 auto;
+        max-width: 1600px;
         z-index: 2;
         ;
         .slick-arrow {
@@ -49,7 +50,7 @@
         }
         /* the parent */
         .slick-list {
-            margin: 0 -20px;
+            margin: 0 -18px;
             overflow: hidden;
             padding-bottom: 80px !important;
         }
@@ -58,7 +59,7 @@
             background-image: linear-gradient(to top, #080824, #161A40);
             border: 1px solid #5d5e9a;
             padding: 0 20px;
-            margin: .5%;
+            margin: .55%;
             background-color: #161A40;
             .card-title {
                 margin-bottom: .75rem;
@@ -68,6 +69,7 @@
                 letter-spacing: .05em;
             }
             .card-text {
+                font-size: 20px;
                 letter-spacing: .05em;
             }
             img {

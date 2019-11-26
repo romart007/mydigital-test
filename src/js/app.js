@@ -32,24 +32,35 @@ MediumWidget.Init({
         "fields": ["description", "author", "claps", "likes", "publishAt"],
         "ratio": "landscape"
     }
-})
+});
 
+function setTop() {
+    // document.querySelector('.img-floated').style.top = imgBottom + 'px';
+    //dynacmic dots 
+    // const imgBuilding = document.querySelector('.building img');
+    // const imgBottom = imgBuilding.offsetTop + imgBuilding.offsetHeight;  
 
-//dynacmic dots 
-const imgBuilding = document.querySelector('.building').offsetWidth / 2;
-const imgBuilding2 = document.querySelector('.building2').offsetWidth / 2;
-const img1 = document.querySelector('.dots-1');
+    const imgBuilding = document.querySelector('.building');
+    var divOffset = offset(imgBuilding);
+    var $el = $('.building');
+    var bottom = $el.position().top + $el.outerHeight(true) / 1.2;
 
-function setDots() {
-    img1.style.right = `${imgBuilding}px`;
-    img1.style.left = `${imgBuilding2}px`;
-    const temp = imgBuilding + imgBuilding;
-
-    img1.style.width = `calc(100% - ${temp}px)`;
+    // document.querySelector('.img-floated').style.marginTop = $el.position().top + 'px';
+    document.querySelector('.img-floated').style.top = bottom + 'px';
 }
 
-window.addEventListener('load', setDots);
-window.onresize = setDots;
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollTop = (window.pageYOffset || document.documentElement.scrollTop);
+    return { top: scrollTop }
+}
+
+// example use
+
+
+window.addEventListener('load', setTop);
+window.addEventListener('resize', setTop);
+window.onresize = setTop;
 
 $('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function() {
     //function call to override the base twitter styles
@@ -122,3 +133,19 @@ var customizeTweetMedia = function() {
         customizeTweetMedia(this);
     });
 }
+
+function myFunction(x) {
+    if (x.matches) { 
+        $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '16px');
+        $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '167px');
+        console.log('test')
+    } else  {
+        $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21px');
+        $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '100%');
+        console.log('testing')
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 767px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes

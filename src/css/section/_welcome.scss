@@ -1,6 +1,10 @@
 .welcome-common {
     padding-top: rem(155);
     position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 1;
+    
     .header-info-container {
         padding-top: rem(15);
         display: flex;
@@ -21,7 +25,7 @@
         font-size: 20px;
         font-weight: 400;
         letter-spacing: .05em;
-        line-height: 1.16;
+        line-height: 1.75;
     }
 }
 

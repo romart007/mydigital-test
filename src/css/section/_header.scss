@@ -1,6 +1,10 @@
 header {
     z-index: 10;
     position: relative;
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
     .form-buttons {
         display: flex;
         justify-content: space-around;
