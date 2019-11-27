@@ -46,6 +46,12 @@
                 }
             }
         }
+
+        .medium-widget-article__image {
+            max-height: 330px;
+            overflow: hidden;
+            margin-bottom: 26px;
+        }
     }
     .twitter-updates-container,
     .medium-updates-container {

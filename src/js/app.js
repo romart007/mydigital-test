@@ -11,7 +11,7 @@ $('.multiple-items').slick({
     dots: true,
     speed: 500,
     responsive: [{
-        breakpoint: 767,
+        breakpoint: 899,
         settings: {
             autoplay: true,
             slidesToShow: 1,
@@ -21,6 +21,10 @@ $('.multiple-items').slick({
         },
     }],
 });
+
+$(window).on('resize orientationchange', function() {
+    $('.multiple-items').slick('resize');
+  });
 
 MediumWidget.Init({
     renderTo: '#medium-widget',
@@ -40,10 +44,11 @@ function setTop() {
     // const imgBuilding = document.querySelector('.building img');
     // const imgBottom = imgBuilding.offsetTop + imgBuilding.offsetHeight;  
 
+    var welcomeHeight = document.querySelector('#welcome').offsetTop;
     const imgBuilding = document.querySelector('.building');
     var divOffset = offset(imgBuilding);
     var $el = $('.building');
-    var bottom = $el.position().top + $el.outerHeight(true) / 1.2;
+    var bottom = $el.position().top + welcomeHeight + $el.outerHeight(true) / 1.2;
 
     // document.querySelector('.img-floated').style.marginTop = $el.position().top + 'px';
     document.querySelector('.img-floated').style.top = bottom + 'px';
@@ -51,7 +56,7 @@ function setTop() {
 
 function offset(el) {
     var rect = el.getBoundingClientRect(),
-    scrollTop = (window.pageYOffset || document.documentElement.scrollTop);
+        scrollTop = (window.pageYOffset || document.documentElement.scrollTop);
     return { top: scrollTop }
 }
 
@@ -62,12 +67,12 @@ window.addEventListener('load', setTop);
 window.addEventListener('resize', setTop);
 window.onresize = setTop;
 
-$('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function() {
+$('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
     //function call to override the base twitter styles
     customizeTweetMedia();
 });
 
-var customizeTweetMedia = function() {
+var customizeTweetMedia = function () {
 
     //overrides font styles and removes the profile picture and media from twitter feed
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Header').css('display', 'none');
@@ -116,6 +121,7 @@ var customizeTweetMedia = function() {
         "margin-bottom": "26"
     });
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('margin-left', '0');
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.NaturalImage-image').css({
         "max-height": "330px;",
@@ -129,23 +135,95 @@ var customizeTweetMedia = function() {
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Body').css('border', '0 none');
 
     //also call the function on dynamic updates in addition to page load
-    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function() {
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function () {
         customizeTweetMedia(this);
     });
 }
 
 function myFunction(x) {
-    if (x.matches) { 
+    if (x.matches) {
         $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '16px');
         $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '167px');
         console.log('test')
-    } else  {
+    } else {
         $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21px');
         $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '100%');
         console.log('testing')
     }
-  }
-  
-  var x = window.matchMedia("(max-width: 767px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction) // Attach listener function on state changes
+}
+
+var x = window.matchMedia("(max-width: 767px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction); // Attach listener function on state changes
+
+
+// smooth scroll
+const makeNavLinksSmooth = () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    for (let n in navLinks) {
+        if (navLinks.hasOwnProperty(n)) {
+            navLinks[n].addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(navLinks[n].hash)
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+            });
+        }
+    }
+}
+
+const spyScrolling = () => {
+    const sections = document.querySelectorAll('.hero-bg');
+
+    window.onscroll = () => {
+        const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+
+        for (let s in sections)
+            if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+                const id = sections[s].id;
+                document.querySelector('.active').classList.remove('active');
+                document.querySelector(`a[href*=${id}]`).parentNode.classList.add('active');
+            }
+    }
+}
+
+//   makeNavLinksSmooth( );
+//   spyScrolling( );
+
+
+var login = document.querySelector('a[href="#login"]');
+var register = document.querySelector('a[href="#register"]');
+var main = document.querySelector('a[href="#logo"]');
+var heroSection = Array.from(document.querySelectorAll('.hero'));
+
+login.addEventListener('click', function (e) {
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-login')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+
+register.addEventListener('click', function (e) {
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-register')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+
+main.addEventListener('click', function (e) {
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-main')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});

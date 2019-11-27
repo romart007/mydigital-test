@@ -9,11 +9,13 @@
     position: relative;
     padding-top: 167px;
     padding-bottom: 93px;
-    &.hero-register {
-        .hero-banner-img {
-            max-width: 650px;
-        }
+    display: none;
+
+    div {
+        position: relative;
+        z-index: 3;
     }
+
     .col-md-7,
     .col-md-5 {
         position: relative;
@@ -65,5 +67,21 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
+        //custom header btn
+        .btn.custom1-outline {
+            background: #ffc107;
+            border: 0 none;
+            text-shadow: 0 1px 0px #000;
+        }
     }
+}
+
+@-webkit-keyframes pulseOnce { 
+    0% {-webkit-transform: translateX(-100%);} 
+    50%{-webkit-transform: translateX(0%);} 
+}
+.active {
+    -webkit-animation: pulseOnce .9s ease-in-out both;
+    display: flex;
 }

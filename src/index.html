@@ -35,7 +35,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand scroll" href="#logo">
                     <img src="images/logo.png" alt="">
                     <p>addirktive</p>
                 </a>
@@ -48,25 +48,30 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">ABOUT <span class="sr-only">(current)</span></a>
+                                <a class="nav-link scroll" href="">ABOUT <span
+                                        class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">PLAY2EARN</a>
+                                <a class="nav-link scroll" href="">PLAY2EARN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">HEX</a>
+                                <a class="nav-link scroll" href="">HEX</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">BUILDINGS</a>
+                                <a class="nav-link scroll" href="">BUILDINGS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">UPDATES</a>
+                                <a class="nav-link scroll" href="">UPDATES</a>
                             </li>
                         </ul>
                     </div>
                     <ul class="form-buttons">
-                        <li class="text-white text-uppercase">Log in</li>
-                        <li class="text-white text-uppercase">Register</li>
+                        <li class="text-white text-uppercase">
+                            <a href="#login">Log in</a>
+                        </li>
+                        <li class="text-white text-uppercase">
+                            <a href="#register">Register</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -75,8 +80,9 @@
     </header>
     <!-- header end -->
 
-    <main role="main">
-        <section class="hero section-common row">
+    <main id="hero" role="main" class="img-bg">
+        <div class="img-floated"></div>
+        <section class="hero hero-main section-common row active">
             <div class="hero-info text-center pos-relative">
                 <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
                 <!-- <h1><span class="highlight">WELCOME TO</span><br> CITY STATES MEDIEVAL
@@ -86,7 +92,7 @@
                 <button type="button" class="btn custom1-outline text-uppercase">Get Started</button>
             </div>
         </section>
-        <section class="hero hero-register section-common row hidden">
+        <section class="hero hero-register section-common row">
             <div class="col-lg-7 col-sm-12">
                 <div class="hero-info text-center pos-relative">
                     <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
@@ -132,7 +138,7 @@
                 </form>
             </div>
         </section>
-        <section class="hero hero-login section-common row hidden">
+        <section class="hero hero-login section-common row">
             <div class="col-lg-7 col-sm-12">
                 <div class="hero-info text-center pos-relative">
                     <img class="hero-banner-img" src="images/hero-banner.png" alt="hero banner">
@@ -164,155 +170,154 @@
                 </form>
             </div>
         </section>
-        <section class="img-bg">
-            <div class="img-floated"></div>
-            <section class="welcome section-common">
-                <div class="welcome-container welcome-common row">
-                    <img class="welcome-img-bg" src="images/bg-welcome.png" alt="building blury">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="welcome-info">
-                            <div class="header-info-container">
-                                <h3 class="text-uppercase"><span class="highlight">Welcome to</span><br> City States
-                                    Medieval
-                                </h3>
-                                <img src="images/population.png" alt="" srcset="" class="img-fluid">
-                            </div>
-                            <p>CS:M Is a cross platform empire building mmo currently in development for
-                                mobile(tablet-smartphone) and desktop computers. <br><br> While similar to other games
-                                on first sight, CS:M is different in may ways. Visually we decided
-                                to go for the full 3d experience in low poly style. Every building and icon has
-                                handpainted with love to the details.<br><br> Resources in the game are also issued as
-                                real world assets on the stellar network. Players trade
-                                resources on a global exchange with each other instead of the engine or prices made up
-                                by the developers.
-                            </p>
+        
+        <section id="welcome" class="welcome section-common">
+            <div class="welcome-container welcome-common row">
+                <img class="welcome-img-bg" src="images/bg-welcome.png" alt="building blury">
+                <div class="col-md-6 col-sm-12">
+                    <div class="welcome-info">
+                        <div class="header-info-container">
+                            <h3 class="text-uppercase"><span class="highlight">Welcome to</span><br> City States
+                                Medieval
+                            </h3>
+                            <img src="images/population.png" alt="" srcset="" class="img-fluid">
                         </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 building">
-                        <img src="images/Building.png" alt="" srcset="" class="img-fluid">
+                        <p>CS:M Is a cross platform empire building mmo currently in development for
+                            mobile(tablet-smartphone) and desktop computers. <br><br> While similar to other games
+                            on first sight, CS:M is different in may ways. Visually we decided
+                            to go for the full 3d experience in low poly style. Every building and icon has
+                            handpainted with love to the details.<br><br> Resources in the game are also issued as
+                            real world assets on the stellar network. Players trade
+                            resources on a global exchange with each other instead of the engine or prices made up
+                            by the developers.
+                        </p>
                     </div>
                 </div>
-                <div class="dots"><img class="dots-1" src="images/dot1.svg"></div>
-                <div class="unique welcome-common row">
-                    <img class="unique-img-bg" src="images/unique-building.png" alt="building blury">
+                <div class="col-md-6 col-sm-12 building">
+                    <img src="images/Building.png" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+            <div class="dots"><img class="dots-1" src="images/dot1.svg"></div>
+            <div id="play2earn" class="unique welcome-common row">
+                <img class="unique-img-bg" src="images/unique-building.png" alt="building blury">
 
-                    <div class="col-md-6 col-sm-12 building2">
-                        <img src="images/Building2.png" alt="" srcset="" class="img-fluid">
-                    </div>
-                    <div class="col-md-6 col-sm-12 ">
-                        <div class="unique-info">
-                            <div class="header-info-container">
-                                <h3 class="text-uppercase"><span class="highlight">Unique</span><br> PLAY 2 EARN CONCEPT
-                                </h3>
-                                <img src="images/shop_selected.png" alt="dollar coin" srcset="" class="img-fluid">
-                            </div>
-                            <p>Probably the most enthralling part of our game concepts is the option for players to earn
-                                money while playing the game. <br><br> The global market is balanced by real supply and
-                                demand of all players not some made up algorithm.
-                                Changing the output of your city state by gathering crafting resources that are in high
-                                demand or simply trading smart can yield profit on the marketplace. <br><br> Profits can
-                                then turned into actual currency and requested
-                                to be paid out.
-                            </p>
+                <div class="col-md-6 col-sm-12 building2">
+                    <img src="images/Building2.png" alt="" srcset="" class="img-fluid">
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <div class="unique-info">
+                        <div class="header-info-container">
+                            <h3 class="text-uppercase"><span class="highlight">Unique</span><br> PLAY 2 EARN CONCEPT
+                            </h3>
+                            <img src="images/shop_selected.png" alt="dollar coin" srcset="" class="img-fluid">
                         </div>
+                        <p>Probably the most enthralling part of our game concepts is the option for players to earn
+                            money while playing the game. <br><br> The global market is balanced by real supply and
+                            demand of all players not some made up algorithm.
+                            Changing the output of your city state by gathering crafting resources that are in high
+                            demand or simply trading smart can yield profit on the marketplace. <br><br> Profits can
+                            then turned into actual currency and requested
+                            to be paid out.
+                        </p>
                     </div>
                 </div>
-                <div class="dots dots-2"><img src="images/dot2.svg"></div>
-            </section>
-            <section class="game-currency section-common">
-                <div class="dots dots-3"><img src="images/dot3.svg"></div>
-                <div class="game-currency-container row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="game-currency-info">
-                            <div class="header-info-container">
-                                <h3 class="text-uppercase"><span class="highlight">Hex</span><br> OUR IN GAME CURRENCY
-                                </h3>
-                                <img src="images/hexcoin.png" alt="dollar coin" srcset="" class="img-fluid">
-                            </div>
-                            <p>Every trade, buy and sell in CS:M is using HEX. Hex is a token on the stellar network
-                                that can be bought with laps or gathered by producing and trading smart.<br><br> We have
-                                several competitions and other features planned where
-                                HEX can be won or obtained without the need to pay for. <br><br> Our goal is to have a
-                                competitive balance between Play 2 Earn and paying players. One should not be able to
-                                pay their way out!
-                            </p>
+            </div>
+            <div class="dots dots-2"><img src="images/dot2.svg"></div>
+        </section>
+        <section id="currency" class="game-currency section-common">
+            <div class="dots dots-3"><img src="images/dot3.svg"></div>
+            <div class="game-currency-container row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="game-currency-info">
+                        <div class="header-info-container">
+                            <h3 class="text-uppercase"><span class="highlight">Hex</span><br> OUR IN GAME CURRENCY
+                            </h3>
+                            <img src="images/hexcoin.png" alt="dollar coin" srcset="" class="img-fluid">
                         </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 text-right hex-shield-img">
-                        <img src="images/hex-shield.png" alt="" srcset="" class="img-fluid">
+                        <p>Every trade, buy and sell in CS:M is using HEX. Hex is a token on the stellar network
+                            that can be bought with laps or gathered by producing and trading smart.<br><br> We have
+                            several competitions and other features planned where
+                            HEX can be won or obtained without the need to pay for. <br><br> Our goal is to have a
+                            competitive balance between Play 2 Earn and paying players. One should not be able to
+                            pay their way out!
+                        </p>
                     </div>
                 </div>
-                <div class="dots dots-4"><img src="images/dot4.svg"></div>
-            </section>
+                <div class="col-md-6 col-sm-12 text-right hex-shield-img">
+                    <img src="images/hex-shield.png" alt="" srcset="" class="img-fluid">
+                </div>
+            </div>
+            <div class="dots dots-4"><img src="images/dot4.svg"></div>
+        </section>
 
-            <!-- temp slider -->
-            <section class="slider">
-                <div class="dots dots-5"><img src="images/dot5.svg"></div>
-                <h3 class="text-center"><span class="highlight">Building in</span><br> CITY STATES: MEDIEVAL
-                </h3>
-                <div class="multiple-items">
-                    <div class="card pos-relative">
-                        <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
-                        <div class="card-body">
-                            <h5 class="card-title">FORESTER</h5>
-                            <p class="card-text">
-                                Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
-                                Material <br><br> Used to Level Up <br><br>
+        <!-- temp slider -->
+        <section id="sliderbuilding" class="slider">
+            <div class="dots dots-5"><img src="images/dot5.svg"></div>
+            <h3 class="text-center"><span class="highlight">Building in</span><br> CITY STATES: MEDIEVAL
+            </h3>
+            <div class="multiple-items">
+                <div class="card pos-relative">
+                    <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
+                    <div class="card-body">
+                        <h5 class="card-title">FORESTER</h5>
+                        <p class="card-text">
+                            Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
+                            Material <br><br> Used to Level Up <br><br>
 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card pos-relative">
-                        <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
-                        <div class="card-body">
-                            <h5 class="card-title">FORESTER</h5>
-                            <p class="card-text">
-                                Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
-                                Material <br><br> Used to Level Up <br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card pos-relative">
-                        <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
-                        <div class="card-body">
-                            <h5 class="card-title">FORESTER</h5>
-                            <p class="card-text">
-                                Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
-                                Material <br><br> Used to Level Up <br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card pos-relative">
-                        <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
-                        <div class="card-body">
-                            <h5 class="card-title">FORESTER</h5>
-                            <p class="card-text">
-                                Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
-                                Material <br><br> Used to Level Up <br><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card pos-relative">
-                        <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
-                        <div class="card-body">
-                            <h5 class="card-title">FORESTER</h5>
-                            <p class="card-text">
-                                Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
-                                Material <br><br> Used to Level Up <br><br>
-                            </p>
-                        </div>
+                        </p>
                     </div>
                 </div>
-            </section>
-            <section class="latest-updates section-common">
-                <div class="dots dots-6"><img src="images/dot6.svg"></div>
-                <div class="latest-updates-container row">
-                    <h1 class="latest-updates-header"><span class="highlight">Check our</span><br> Latest Updates
-                    </h1>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="twitter-updates">
-                            <h3><span class="highlight">OUR LATEST</span> TWITTER UPDATES</h3>
-                            <!-- <div class="twitter-updates-container">
+                <div class="card pos-relative">
+                    <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
+                    <div class="card-body">
+                        <h5 class="card-title">FORESTER</h5>
+                        <p class="card-text">
+                            Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
+                            Material <br><br> Used to Level Up <br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card pos-relative">
+                    <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
+                    <div class="card-body">
+                        <h5 class="card-title">FORESTER</h5>
+                        <p class="card-text">
+                            Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
+                            Material <br><br> Used to Level Up <br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card pos-relative">
+                    <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
+                    <div class="card-body">
+                        <h5 class="card-title">FORESTER</h5>
+                        <p class="card-text">
+                            Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
+                            Material <br><br> Used to Level Up <br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card pos-relative">
+                    <img class="card-img-bottom pos-absolute" src="images/slider-image.png" alt="Card image slider">
+                    <div class="card-body">
+                        <h5 class="card-title">FORESTER</h5>
+                        <p class="card-text">
+                            Gathering Wood <br><br> Crucial Resource <br><br> Building Material <br><br> Crafting
+                            Material <br><br> Used to Level Up <br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="latest" class="latest-updates section-common">
+            <div class="dots dots-6"><img src="images/dot6.svg"></div>
+            <div class="latest-updates-container row">
+                <h1 class="latest-updates-header"><span class="highlight">Check our</span><br> Latest Updates
+                </h1>
+                <div class="col-md-6 col-sm-12">
+                    <div class="twitter-updates">
+                        <h3><span class="highlight">OUR LATEST</span> TWITTER UPDATES</h3>
+                        <!-- <div class="twitter-updates-container">
                                 <img class="img-fluid" src="images/tw-img.png" alt="">
                                 <p>Draft design for the exchange interface. Heavily inspired by <span class="highlight">@stellarxhq</span> still a work in progress<span class="highlight">#citystates #strategy #android #ios #indiedev #gamedev #unity3d
                                         #indiegame #gaming #games #cryptocurrency #stellar #blockchain
@@ -336,22 +341,22 @@
                                     </span>
                                 </div>
                             </div>-->
-                            <div class="twitter-block">
-                                <a class="twitter-timeline" href="https://twitter.com/addirktive?ref_src=twsrc%5Etfw"
-                                    data-tweet-limit="2">Tweets by addirktive</a>
-                            </div>
-                            <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-                            <button type="button" class="btn custom1-outline text-uppercase"><a target="_blank"
-                                    href="https://twitter.com/addirktive">VIEW ALL IN TWITTER</a></button>
+                        <div class="twitter-block">
+                            <a class="twitter-timeline" href="https://twitter.com/addirktive?ref_src=twsrc%5Etfw"
+                                data-tweet-limit="2">Tweets by addirktive</a>
                         </div>
+                        <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                        <button type="button" class="btn custom1-outline text-uppercase"><a target="_blank"
+                                href="https://twitter.com/addirktive">VIEW ALL IN TWITTER</a></button>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="medium-updates">
-                            <h3><span class="highlight">OUR LATEST</span> MEDIUM UPDATES</h3>
-                            <div id="medium-widget"></div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="medium-updates">
+                        <h3><span class="highlight">OUR LATEST</span> MEDIUM UPDATES</h3>
+                        <div id="medium-widget"></div>
 
 
-                            <!-- <div class="medium-updates-container">
+                        <!-- <div class="medium-updates-container">
                                 <img class="img-fluid" src="images/md-img.png" alt="">
                                 <p>Disrupting the Game Industry Games as microjobbing opportunities<br><br>
                                     <span>addirktive Games is developing City States: Medieval, a multiplayer strategy game
@@ -377,12 +382,11 @@
                                     </span>
                                 </div>
                             </div> -->
-                            <button type="button" class="btn custom1-outline text-uppercase"> <a target="_blank"
-                                    href="https://medium.com/@addirktive">VIEW ALL IN MEDIUM</a> </button>
-                        </div>
+                        <button type="button" class="btn custom1-outline text-uppercase"> <a target="_blank"
+                                href="https://medium.com/@addirktive">VIEW ALL IN MEDIUM</a> </button>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
 

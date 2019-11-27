@@ -1,7 +1,7 @@
 /* large screens*/
 
 @media only screen and (min-width: 1370px) {
-    .hero {
+    .hero:not(.hero-register) {
         height: 100vh;
     }
 }
@@ -68,15 +68,20 @@
 }
 
 @media only screen and (max-width: 1300px) {
+    .hero {
+        .hero-banner-img {
+            max-width: 650px;
+        }
+    }
+
     .img-bg .img-floated {
-        top: 650px !important;
-        left: -150px;
+        top: 500px !important;
     }
 }
 
 @media only screen and (max-width: 1180px) {
     .img-bg .img-floated {
-        top: 600px !important;
+        top: 450px !important;
     }
 }
 
@@ -98,6 +103,32 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1240px)  {
+    .slider .multiple-items .card {
+        .card-text {
+            font-size: 14px;
+        }
+    }    
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px)  {
+    .slider .multiple-items .card {
+        .card-text {
+            font-size: 14px;
+        }
+
+        img {
+            top: 127px;
+            right: -5px;
+        }
+    }    
+
+    .slick-slide img {
+        max-height: 204px;
     }
 }
 
@@ -160,6 +191,18 @@
             margin-right: 50px;
         }
     }
+}
+
+@media only screen and (max-width: 899px) { 
+    .img-bg .img-floated {
+        visibility: hidden;
+    }
+    .hero {
+        .col-lg-7 {
+           margin-bottom: 60px; 
+        }
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
