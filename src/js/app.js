@@ -194,13 +194,35 @@ const spyScrolling = () => {
 
 
 var login = document.querySelector('a[href="#login"]');
+var loginLink = document.querySelector('.login-link a');
+var registerLink = document.querySelector('.register-link a');
 var register = document.querySelector('a[href="#register"]');
 var main = document.querySelector('a[href="#logo"]');
 var heroSection = Array.from(document.querySelectorAll('.hero'));
 
+loginLink.addEventListener('click', function (e) {
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-login')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+
 login.addEventListener('click', function (e) {
     heroSection.forEach(el => {
         if (el.classList.contains('hero-login')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+
+registerLink.addEventListener('click', function (e) {
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-register')) {
             el.classList.add('active');
         } else {
             el.classList.remove('active');
