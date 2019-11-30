@@ -1,8 +1,68 @@
 /* large screens*/
 
-@media only screen and (min-width: 1370px) {
-    .hero:not(.hero-register) {
-        height: 100vh;
+@media only screen and (max-width: 1366px) {
+    .hero {
+        padding-top: 100px;
+        .hero-info {
+            .btn.custom1-outline {
+                font-size: 20px;
+                padding: 15px 40px;
+            }
+        }
+    }
+    .hero .hero-banner-img {
+        max-width: 690px;
+    }
+    .form-group {
+        margin-bottom: .75rem;
+    }
+    .hero-login form {
+        padding: 45px 40px 30px;
+    }
+    .form {
+        padding: 35px 40px 25px;
+        h3 {
+            font-size: 16px;
+            line-height: 1.2;
+            padding-bottom: 10px;
+        }
+        label {
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+        label+img {
+            height: 14px;
+            width: 14px;
+            top: 3px;
+            left: 5px;
+        }
+        .form-group p {
+            left: 121px;
+        }
+        input.form-input {
+            padding: 10px 26px 10px;
+            font-size: 13px;
+        }
+        .container {
+            font-size: 12px;
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+        .remember-me span,
+        .terms-agree span {
+            height: 13px;
+            width: 13px;
+        }
+        .login-link,
+        .register-link {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+    .btn.custom1-solid {
+        font-size: 13px;
+        margin-top: 10px;
+        padding: 10px 17.5px 10px;
     }
 }
 
@@ -73,7 +133,6 @@
             max-width: 650px;
         }
     }
-
     .img-bg .img-floated {
         top: 500px !important;
     }
@@ -106,27 +165,24 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1240px)  {
+@media only screen and (min-width: 768px) and (max-width: 1240px) {
     .slider .multiple-items .card {
         .card-text {
             font-size: 14px;
         }
-    }    
-
+    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1100px)  {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
     .slider .multiple-items .card {
         .card-text {
             font-size: 14px;
         }
-
         img {
             top: 127px;
             right: -5px;
         }
-    }    
-
+    }
     .slick-slide img {
         max-height: 204px;
     }
@@ -150,6 +206,14 @@
             .nav-link {
                 padding: 0 1.15rem;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero {
+        .hero-banner-img {
+            max-width: 450px;
         }
     }
 }
@@ -193,23 +257,21 @@
     }
 }
 
-@media only screen and (max-width: 899px) { 
+@media only screen and (max-width: 899px) {
     .img-bg .img-floated {
         visibility: hidden;
     }
     .hero {
         .col-lg-7 {
-           margin-bottom: 60px; 
+            margin-bottom: 60px;
         }
     }
-
 }
 
 @media only screen and (max-width: 767px) {
     .img-bg .img-floated {
         display: none;
     }
-
     .section-common {
         padding-right: 20px;
         padding-left: 20px;
@@ -217,6 +279,20 @@
         &.hero {
             height: 100vh;
             padding-top: 0;
+            .col-lg-7 {
+                display: none;
+                margin-bottom: 60px;
+            }
+            &.hero-login {
+                .col-lg-5 {
+                    padding-top: 70px;
+                }
+            }
+            &.hero-register {
+                .col-lg-5 {
+                    padding-top: 100px;
+                }
+            }
         }
         &.game-currency {
             margin-top: 0;
@@ -233,6 +309,10 @@
         .btn.custom1-outline {
             margin-top: 0;
         }
+    }
+    .form .login-link,
+    .form .register-link {
+        font-size: 10px;
     }
     nav.bg-dark {
         padding-left: 20px;
@@ -403,6 +483,17 @@
         .copy-rights p {
             font-size: 12px;
             line-height: 1.6;
+        }
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .section-common {
+        &.hero {
+            height: auto !important;
         }
     }
 }

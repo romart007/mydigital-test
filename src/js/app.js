@@ -24,7 +24,7 @@ $('.multiple-items').slick({
 
 $(window).on('resize orientationchange', function() {
     $('.multiple-items').slick('resize');
-  });
+});
 
 MediumWidget.Init({
     renderTo: '#medium-widget',
@@ -52,6 +52,7 @@ function setTop() {
 
     // document.querySelector('.img-floated').style.marginTop = $el.position().top + 'px';
     document.querySelector('.img-floated').style.top = bottom + 'px';
+    document.querySelector('.img-floated').style.height = `calc(100% - ${bottom}px)`;
 }
 
 function offset(el) {
@@ -67,12 +68,12 @@ window.addEventListener('load', setTop);
 window.addEventListener('resize', setTop);
 window.onresize = setTop;
 
-$('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
+$('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function() {
     //function call to override the base twitter styles
     customizeTweetMedia();
 });
 
-var customizeTweetMedia = function () {
+var customizeTweetMedia = function() {
 
     //overrides font styles and removes the profile picture and media from twitter feed
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Header').css('display', 'none');
@@ -135,7 +136,7 @@ var customizeTweetMedia = function () {
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Body').css('border', '0 none');
 
     //also call the function on dynamic updates in addition to page load
-    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function () {
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function() {
         customizeTweetMedia(this);
     });
 }
@@ -144,11 +145,9 @@ function myFunction(x) {
     if (x.matches) {
         $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '16px');
         $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '167px');
-        console.log('test')
     } else {
         $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21px');
         $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-mediaContainer').css('max-height', '100%');
-        console.log('testing')
     }
 }
 
@@ -197,10 +196,13 @@ var login = document.querySelector('a[href="#login"]');
 var loginLink = document.querySelector('.login-link a');
 var registerLink = document.querySelector('.register-link a');
 var register = document.querySelector('a[href="#register"]');
-var main = document.querySelector('a[href="#logo"]');
+var registerBtn = document.querySelector('.hero-info [type="button"]');
+var main = document.querySelector('a[href="#hero"]');
 var heroSection = Array.from(document.querySelectorAll('.hero'));
 
-loginLink.addEventListener('click', function (e) {
+
+loginLink.addEventListener('click', function(e) {
+    scrollTopFunction();
     heroSection.forEach(el => {
         if (el.classList.contains('hero-login')) {
             el.classList.add('active');
@@ -210,7 +212,8 @@ loginLink.addEventListener('click', function (e) {
     });
 });
 
-login.addEventListener('click', function (e) {
+login.addEventListener('click', function(e) {
+    scrollTopFunction();
     heroSection.forEach(el => {
         if (el.classList.contains('hero-login')) {
             el.classList.add('active');
@@ -220,7 +223,8 @@ login.addEventListener('click', function (e) {
     });
 });
 
-registerLink.addEventListener('click', function (e) {
+registerLink.addEventListener('click', function(e) {
+    scrollTopFunction();
     heroSection.forEach(el => {
         if (el.classList.contains('hero-register')) {
             el.classList.add('active');
@@ -230,7 +234,8 @@ registerLink.addEventListener('click', function (e) {
     });
 });
 
-register.addEventListener('click', function (e) {
+register.addEventListener('click', function(e) {
+    scrollTopFunction();
     heroSection.forEach(el => {
         if (el.classList.contains('hero-register')) {
             el.classList.add('active');
@@ -240,7 +245,19 @@ register.addEventListener('click', function (e) {
     });
 });
 
-main.addEventListener('click', function (e) {
+registerBtn.addEventListener('click', function(e) {
+    scrollTopFunction();
+    heroSection.forEach(el => {
+        if (el.classList.contains('hero-register')) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+});
+
+main.addEventListener('click', function(e) {
+    scrollTopFunction();
     heroSection.forEach(el => {
         if (el.classList.contains('hero-main')) {
             el.classList.add('active');
@@ -249,3 +266,12 @@ main.addEventListener('click', function (e) {
         }
     });
 });
+
+function scrollTopFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+}
+
+// window.onscroll = function() { scrollFunction() };

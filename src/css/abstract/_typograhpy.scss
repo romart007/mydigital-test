@@ -1,5 +1,6 @@
 html,
 body {
+    scroll-behavior: smooth;
     background-color: $blue;
     color: $white;
     font-size: 100%;
@@ -18,7 +19,7 @@ body {
 body,
 input,
 select,
-textarea, 
+textarea,
 button,
 a {
     user-select: auto;

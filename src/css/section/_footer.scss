@@ -2,12 +2,13 @@ footer {
     padding-top: 65px;
     padding-bottom: 55px;
     background: #1D1D2D;
-
-    .row, hr {
-    max-width: 1600px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    .row,
+    hr {
+        max-width: 1600px;
+        margin: 0 auto;
     }
-
     .row:first-child {
         margin-bottom: 58px;
     }

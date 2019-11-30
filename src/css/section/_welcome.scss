@@ -1,10 +1,14 @@
-.welcome-common {
-    padding-top: rem(155);
+.welcome {
     position: relative;
+    overflow: hidden;
+}
+
+.welcome-common {
+    position: inherit;
+    padding-top: rem(155);
     max-width: 1600px;
     margin: 0 auto;
     z-index: 1;
-    
     .header-info-container {
         padding-top: rem(15);
         display: flex;
