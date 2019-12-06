@@ -123,6 +123,7 @@ var customizeTweetMedia = function() {
     });
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('margin-left', '0');
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21');
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-family', 'poppins');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.NaturalImage-image').css({
         "max-height": "330px;",
@@ -273,5 +274,21 @@ function scrollTopFunction() {
         document.documentElement.scrollTop = 0;
     }
 }
+
+$(document).ready(function() {
+    setTimeout(function() {
+        var iframe = document.getElementsByTagName('iframe')[0],
+            iframeDoc = iframe.contentWindow.document;
+        var otherhead = iframeDoc.getElementsByTagName("head")[0];
+
+        var css = document.createElement("link");
+        css.type = "text/css";
+        css.rel = "stylesheet";
+        css.href = "https://fonts.googleapis.com/css?family=Poppins&display=swap";
+
+        otherhead.appendChild(css);
+    }, 500);
+});
+
 
 // window.onscroll = function() { scrollFunction() };

@@ -303,7 +303,7 @@
     }
     .hero {
         .hero-banner-img {
-            max-width: 100%;
+            // max-width: 100%;
             height: auto;
         }
         .btn.custom1-outline {
@@ -487,13 +487,30 @@
     }
 }
 
+@media only screen and (max-width: 576px) {
+    .hero {
+        .hero-banner-img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
 
 /* Landscape */
 
 @media only screen and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
     .section-common {
         &.hero {
-            height: auto !important;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .section-common {
+        &.hero {
+            height: 100vh;
         }
     }
 }
