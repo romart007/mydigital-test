@@ -61,12 +61,9 @@ function offset(el) {
     return { top: scrollTop }
 }
 
-// example use
-
-
 window.addEventListener('load', setTop);
 window.addEventListener('resize', setTop);
-window.onresize = setTop;
+// window.onresize = setTop;
 
 $('.twitter-block').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function() {
     //function call to override the base twitter styles
@@ -121,18 +118,33 @@ var customizeTweetMedia = function() {
         "margin-left": "0",
         "margin-bottom": "26"
     });
-    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('margin-left', '0');
-    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '21');
-    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-family', 'poppins');
+
+    var fontS = $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size');
+    fontS = fontS.slice(0, -2);
+
+    var maxHeight = Number(fontS) * 5;
+    console.log(maxHeight)
+
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css({
+        "color": "white",
+        "margin-left": "0",
+        "font-size": "21px",
+        "font-family": "poppins",
+        "overflow": "hidden",
+        "position": "relative",
+        "margin-bottom": "2px",
+    });
+
+    $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Tweet-text a').next().next().next().next().next().nextAll().css('display', 'none');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.NaturalImage-image').css({
-        "max-height": "330px;",
+        "max-height": "308px;",
         "display": "flex;",
         "flex-direction": "column-reverse",
         "width": "auto",
     });
 
-    $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-media').css('max-height', '330px');
+    $('.twitter-block').find('.twitter-timeline').contents().find('.MediaCard-media').css('max-height', '308px');
 
     $('.twitter-block').find('.twitter-timeline').contents().find('.timeline-Body').css('border', '0 none');
 
@@ -275,20 +287,20 @@ function scrollTopFunction() {
     }
 }
 
-$(document).ready(function() {
-    setTimeout(function() {
-        var iframe = document.getElementsByTagName('iframe')[0],
-            iframeDoc = iframe.contentWindow.document;
-        var otherhead = iframeDoc.getElementsByTagName("head")[0];
+// $(document).ready(function() {
+//     setTimeout(function() {
+//         var iframe = document.getElementsByTagName('iframe')[0],
+//             iframeDoc = iframe.contentWindow.document;
+//         var otherhead = iframeDoc.getElementsByTagName("head")[0];
 
-        var css = document.createElement("link");
-        css.type = "text/css";
-        css.rel = "stylesheet";
-        css.href = "https://fonts.googleapis.com/css?family=Poppins&display=swap";
+//         var css = document.createElement("link");
+//         css.type = "text/css";
+//         css.rel = "stylesheet";
+//         css.href = "https://fonts.googleapis.com/css?family=Poppins&display=swap";
 
-        otherhead.appendChild(css);
-    }, 500);
-});
+//         otherhead.appendChild(css);
+//     }, 500);
+// });
 
 
 // window.onscroll = function() { scrollFunction() };
