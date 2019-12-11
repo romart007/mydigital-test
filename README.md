@@ -1,6 +1,6 @@
 
 ```
-  git clone https://github.com/romart007/form-test.git
+  git clone https://github.com/romart007/ctStates.git
   cd my_project
   npm install
 ```
