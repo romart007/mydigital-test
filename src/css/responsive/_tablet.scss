@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 1366px) {
     .hero {
-        padding-top: 100px;
+        
         .hero-info {
             .btn.custom1-outline {
                 font-size: 20px;
@@ -314,15 +314,7 @@
     .form .register-link {
         font-size: 10px;
     }
-    nav.bg-dark {
-        padding-left: 20px;
-        padding-right: 20px;
-        .navbar-brand {
-            p {
-                display: none;
-            }
-        }
-    }
+
     header .form-buttons li {
         font-size: 14px;
     }

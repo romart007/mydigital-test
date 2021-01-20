@@ -1,95 +1,42 @@
 .hero {
-    background-image: url("/images/hero.png");
+    background-image: url('/images/hero-bg3.png');
+    background-position: center center;
     background-size: cover;
-    background-position: center top;
+    display: inline-block;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding-top: 167px;
-    padding-bottom: 93px;
-    display: none;
-    &:not(.hero-register) {
-        height: 100vh;
-    }
-    div {
-        position: relative;
-        z-index: 3;
-    }
-    .col-md-7,
-    .col-md-5 {
-        position: relative;
-        z-index: 5;
-    }
-    h1 {
-        letter-spacing: .05em;
-        font-weight: 900;
-        line-height: 1.4;
-        text-shadow: 0px 3px black;
-        margin-bottom: 14px;
-    }
-    p {
-        font-size: 24px;
-        letter-spacing: .05em;
-        line-height: 1.6;
-        font-weight: 400;
-        color: $white;
-    }
-    &:after {
-        background: rgba(#010917, .56);
-        display: block;
-        content: '';
+    background-position: center center;
+    height: 319px;
+
+    &::before {
+        display: inline-block;
         position: absolute;
+        width: 100%;
         height: 100%;
-        width: 100%;
-        z-index: 1;
-        bottom: 0;
-    }
-    &.hero-main:after {
-        background: rgba(#010917, .36);
-    }
-    &:before {
-        bottom: 0;
-        display: block;
+        background: rgba($black, .2);
         content: '';
-        position: absolute;
-        height: 50%;
-        width: 100%;
-        z-index: 2;
-        background-color: transparent;
-        background-image: linear-gradient(0deg, #010917, transparent);
     }
-    .hero-banner-img {
-        max-width: 840px;
-        // margin-top: 7rem;
-    }
+
     .hero-info {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        //custom header btn
-        .btn.custom1-outline {
-            background: #ffc107;
-            border: 0 none;
-            text-shadow: 0 1px 0px #000;
+        background-color: rgba(#D8D8D8, .25);
+        padding: 26px 42px;
+        max-width: 535px;
+
+        p { 
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: $white;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            color: $white;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.06;
+            max-width: 451px;
+            text-transform: unset;
+            margin-bottom: 13px;
         }
     }
-}
-
-@-webkit-keyframes pulseOnce {
-    0% {
-        -webkit-transform: translateY(-100%);
-    }
-    50% {
-        -webkit-transform: translateY(0%);
-    }
-}
-
-.active {
-    -webkit-animation: pulseOnce .9s ease-in-out both;
-    display: flex;
 }

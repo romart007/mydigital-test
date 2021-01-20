@@ -14,7 +14,6 @@
     }
     label,
     input.form-input {
-        font-family: $secondary-font !important;
         font-size: 15px;
         font-weight: 400;
         letter-spacing: .05em;
@@ -84,7 +83,6 @@
         font-size: 15px;
         color: #82828F;
         a {
-            font-family: $secondary-font !important;
             text-decoration: none;
             color: $white;
             &:hover,

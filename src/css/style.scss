@@ -1,8 +1,11 @@
 /*--------------------------------------------------------------
-# Vendor Optionally add Bootstrap to your project
+# Vendor Optionally add to your project
 --------------------------------------------------------------*/
 
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+// @import "~tailwindcss/base";
+// @import "~tailwindcss/components";
+// @import "~tailwindcss/utilities";
 @import "vendor/twitter-feed";
 
 /*--------------------------------------------------------------
@@ -35,11 +38,7 @@
 
 @import "section/header";
 @import "section/hero";
-@import "section/welcome";
-@import "section/hex-currency";
-@import "section/slider";
-@import "section/latest-updates";
-@import "section/image-bg";
+@import "section/cta";
 @import "section/footer";
 
 /*--------------------------------------------------------------
@@ -49,7 +48,6 @@
 @import "components/nav";
 @import "components/forms";
 @import "components/buttons";
-@import "components/dots";
 
 /*--------------------------------------------------------------
 # responsive

@@ -1,0 +1,51 @@
+.cta-container {
+    padding-top: 70px;
+    
+    .cta-item {
+        margin-bottom: 20px;
+        max-width: 460px;
+        padding: 90.5px 37px 90.5px 48px;
+
+        &.counseling-info {
+            background-color: $pink;
+        }
+
+        &.educ-info {
+            background-color: $green;
+        }
+
+        &.fund-info {
+            background-color: $blue3;
+        }
+
+        &.help-info {
+            background-color: $orange;
+        }
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
+
+    p {
+        color: $white; 
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25em;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: $white; 
+        line-height: 1.06;
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    
+}
